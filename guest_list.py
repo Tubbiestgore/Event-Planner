@@ -21,6 +21,16 @@ class GuestList:
         doc_id = doc_ref[1].id if isinstance(doc_ref, tuple) else doc_ref.id
 
         return doc_id
+    
+    @staticmethod
+    def get_guest_list_by_id(guest_list_id):
+        guest_list_ref = db.collection('guest_lists').document(guest_list_id)
+        guest_list_doc = guest_list_ref.get()
+
+        if guest_list_doc.exists:
+            return guest_list_doc.to_dict()
+        else:
+            return None
 
     @staticmethod
     def get_all_guest_lists_from_firestore():
