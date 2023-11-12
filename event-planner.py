@@ -127,30 +127,22 @@ while(play == 1):
             
     if (userInput == 6):
         
-        event_id_to_delete = input("Enter the ID of the event to delete along with its associated guest list: ")
+        event_id_to_delete = input("Enter the ID of the event to delete: ")
+        guest_list_id_to_delete = input("Enter the ID of the associated guest list to delete: ")
 
         # Retrieve the event from Firestore using the provided ID
         event_ref = db.collection('events').document(event_id_to_delete)
         existing_event = event_ref.get()
 
         if existing_event.exists:
-            # Retrieve the associated guest list ID
-            guest_list_id_associated = existing_event.get('guest_list_id')
-
             # Delete the event from Firestore
             event_ref.delete()
             print(f'Event with ID {event_id_to_delete} deleted successfully.\n')
 
-            # Delete the associated guest list using the guest list ID
-            if guest_list_id_associated:
-                guest_list_ref = db.collection('guest_lists').document(guest_list_id_associated)
-                guest_list_ref.delete()
-                print(f'Associated Guest List with ID {guest_list_id_associated} deleted.\n')
-            else:
-                print('No associated guest list.\n')
-
-        else:
-            print(f'Event with ID {event_id_to_delete} not found.\n')
+        # Delete the associated guest list using the provided guest list ID
+        guest_list_ref = db.collection('guest_lists').document(guest_list_id_to_delete)
+        guest_list_ref.delete()
+        print(f'Associated Guest List with ID {guest_list_id_to_delete} deleted.\n')
     
     if (userInput == 7):
         print('Thank you. Exiting Program.')

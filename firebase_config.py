@@ -7,7 +7,7 @@ initialized_apps = {}
 def initialize_firebase():
     # Check if Firebase has already been initialized
     if not initialized_apps:
-        cred = credentials.Certificate("event-planner-v2-firebase-adminsdk-vhc2l-830ab8ee40.json")
+        cred = credentials.Certificate("event-planner-v2-firebase-adminsdk-vhc2l-4dfb6a48ab.json")
         app = firebase_admin.initialize_app(cred, name='event-planner-app')
 
         # Access Firestore database

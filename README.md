@@ -1,38 +1,34 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This project is desgined as a test of cloud database software engineering. In essence it is designed as an application of principles related to the subject in the skein of working within the cloud.
 
-{Provide a description of the software that you wrote and how it integrates with a Cloud Database. Describe how to use your program.}
+The program itself is a basic Event Planner it utilizes calls to a cloud server in order to store data as inputed by the user. Simply run the program and select the options that you want to work with. The software will take care of the rest. As stated this program is extremly basic. The difficult part of this project was figuring out how to working with a cloud database. 
 
-{Describe your purpose for writing this software.}
+As stated above the purpose in writing this software is to further my knowledge and skills when working within the cloud and its databases. How to utilizes such resources and integrate them into my own software.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/Jm4szPOmXZo)
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
+The cloud firestore is a NoSQL document database provided by Google Cloud Platform. In essence, it is designed to store and synchronize data accross multiple clients, such as when working with an app, and provides support for large amounts of both users and data. It stores data in JSON like documents instead of the tranditional table based structure. It also has great network security, regular updates, and other such commodities, although many of such services do. 
 
-{Describe the structure of the database that you created.}
+The structure itself is a collection document model on a NoSQL database. Within we have an event collection and a guest list collection. With some edits you can associate these collections with one another. We can see that this sort of structure allows for relationships ebtween the variables at play. 
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+For this projcet I utilized firebase which is a cloud database service, and vscode via the python programming language. I also used import firebase-admin which is the python library provided by firebase for interacting with their servers. 
 
-{Describe the programming language that you used and any libraries.}
+The language which I used for this project was the python programming language. A good choice for networking and working within the cloud. Lots of documentation is provided to help one get started when working in this manner. 
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
 - [Operation of Firebase on VScode](https://www.youtube.com/watch?v=-3GkNz1lfCE)
-- [Web Site Name](http://url.link.goes.here)
+- [CLoud Databases](https://en.wikipedia.org/wiki/Cloud_database)
+- [Working with cloud firestore](https://pypi.org/project/google-cloud-firestore/0.28.0/)
+- [Python Firestore Example](https://www.youtube.com/watch?v=gwDXvMqJ2PY)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Better connections between collections
+- More understanidng of Cloud structure - specifically language orientation (which is best for said development etc...)
+- More in depth Event Planner
